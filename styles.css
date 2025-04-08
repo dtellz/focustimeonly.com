@@ -69,6 +69,7 @@ header .container {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 nav ul {
@@ -84,16 +85,37 @@ nav ul li a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+    nav ul li {
+        margin-left: 1rem;
+    }
+    
+    nav ul li a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        display: inline-block;
+        text-align: center;
+    }
 }
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 5rem;
+    padding: 12rem 0 5rem;
     background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2), transparent 70%);
 }
 
@@ -356,14 +378,33 @@ footer a:hover {
         flex-direction: column;
     }
     
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 5px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+    
     nav ul li {
-        margin-left: 1rem;
+        margin: 0;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 8rem 0 3rem;
+        padding: 10rem 0 3rem;
     }
     
     .hero h1 {
