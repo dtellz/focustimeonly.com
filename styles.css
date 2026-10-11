@@ -59,7 +59,6 @@ section[id] {
 .availability-banner {
     display: flex;
     align-items: center;
-    gap: 1rem;
     padding: 0.75rem 1rem;
     background: #ffd166;
     color: #241a05;
@@ -86,34 +85,6 @@ section[id] {
     min-width: 100vw;
     padding-right: 4rem;
     white-space: nowrap;
-}
-
-.notice-control {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid currentColor;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.notice-control input {
-    width: 1rem;
-    height: 1rem;
-    accent-color: #241a05;
-    cursor: pointer;
-}
-
-.notice-control:focus-within {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
-}
-
-.availability-banner:has(.notice-control input:checked) .notice-track {
-    animation-play-state: paused;
 }
 
 @keyframes notice-scroll {
