@@ -1,59 +1,26 @@
-# Focus Time Only - Landing Page
+# Focus Time Only
 
-This is the landing page for the Focus Time Only iOS app, a productivity app that reached the top 5 in Spain.
+Static landing page for the Focus Time Only iOS app (temporarily unreleased - contact me for a free direct copy or access to its private repo). It uses HTML and CSS only, so GitHub Pages can host it without a framework, package installation, or build command.
 
-## Project Overview
+The site includes a prominent scrolling notice explaining that the developer has cancelled their Apple Developer Program membership and the app is temporarily unavailable on the App Store. The CSS marquee moves continuously from right to left on a single line at every screen size. It only pauses when visitors select the Pause control.
 
-This is a simple static HTML/CSS website designed to showcase the Focus Time Only app, its features, and achievements. The site is ready to be deployed to Netlify.
+## Deploy to GitHub Pages
 
-## Features
+The workflow in [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) packages the site on pushes and pull requests targeting `master`. Successful pushes to `master` deploy automatically; pull requests do not deploy. You can also deploy `master` manually from the Actions tab.
 
-- Responsive design that works on all devices
-- Modern UI with gradient effects
-- Video showcase section
-- Features section highlighting app capabilities
-- Achievement section showcasing top 5 ranking
-- App Store download button
+## Local preview
 
-## Structure
-
-- `index.html` - Main HTML file
-- `styles.css` - CSS styling
-- `assets/` - Contains media files:
-  - `promo_video.MP4` - Promotional video
-  - `top5_chart.PNG` - Screenshot of app ranking
-  - `app-store-badge.svg` - App Store download button
-
-## Deployment Instructions
-
-### Deploy to Netlify
-
-1. Create a Netlify account if you don't have one
-2. From the Netlify dashboard, click "Add new site" > "Import an existing project"
-3. Connect to your Git provider (GitHub, GitLab, etc.)
-4. Select the repository containing this project
-5. Configure build settings (not required for this static site)
-6. Click "Deploy site"
-
-### Manual Deployment
-
-1. Run `netlify deploy` from the project directory (requires Netlify CLI)
-2. Follow the prompts to complete deployment
-
-## Local Development
-
-To preview the site locally, you can use any simple HTTP server:
+From the project directory:
 
 ```bash
-# Using Python
-python -m http.server
-
-# Or using Node.js with http-server
-npx http-server
+python3 -m http.server 8000
 ```
 
-Then open your browser to `http://localhost:8000` or the port specified by your server.
+Open <http://localhost:8000>. There are no dependencies to install.
 
-## Customization
+## Project structure
 
-Feel free to modify the colors in the CSS variables at the top of the `styles.css` file to match your brand preferences.
+- `index.html` — page content and App Store availability notice.
+- `styles.css` — responsive styling and the accessible marquee animation.
+- `assets/` — app icons, ranking screenshot, and promotional video.
+- `.github/workflows/deploy-pages.yml` — packaging and automatic GitHub Pages deployment.

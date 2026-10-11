@@ -26,7 +26,7 @@
     <meta property="twitter:image" content="https://focustimeonly.com/assets/app_icon.png">
     
     <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="https://focustimeonly.com/assets/app_icon.png">
+    <link rel="apple-touch-icon" href="assets/app_icon.png">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,18 @@
 </head>
 <body>
     <header>
+        <aside class="availability-banner" aria-label="App Store availability">
+            <div class="notice-viewport">
+                <div class="notice-track">
+                    <p class="notice-message"><strong>App Store update:</strong> The developer has cancelled their Apple Developer Program membership. Focus Time Only is temporarily unavailable on the App Store.</p>
+                    <p class="notice-message" aria-hidden="true"><strong>App Store update:</strong> The developer has cancelled their Apple Developer Program membership. Focus Time Only is temporarily unavailable on the App Store.</p>
+                </div>
+            </div>
+            <label class="notice-control">
+                <input type="checkbox" aria-label="Pause scrolling notice">
+                Pause
+            </label>
+        </aside>
         <div class="container">
             <div class="logo">
                 <h1>Focus Time Only</h1>
@@ -42,7 +54,7 @@
             <nav>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#download">Download</a></li>
+                    <li><a href="#download">Availability</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,9 +69,7 @@
                 <h1>Turn Your iPhone Face-Down to Focus</h1>
                 <p>Reimagine the Pomodoro technique with intuitive physical interactions and AI-powered motivation.</p>
                 <div class="cta-buttons">
-                    <a href="https://apps.apple.com/app/focus-time-only/id6744193949" class="app-store-button">
-                        <img src="assets/app_store.svg.png" alt="Download on the App Store">
-                    </a>
+                    <a href="#download" class="availability-link">Temporarily unavailable on the App Store</a>
                 </div>
                 <div class="achievement">
                     <div class="badge">
@@ -139,13 +149,8 @@
 
     <section id="download" class="download">
         <div class="container">
-            <h2>Boost Your Productivity Today</h2>
-            <p>Less screen time. More focus time. Download Focus Time Only now.</p>
-            <div class="cta-buttons">
-                <a href="https://apps.apple.com/app/focus-time-only/id6744193949" class="app-store-button">
-                    <img src="assets/app_store.svg.png" alt="Download on the App Store">
-                </a>
-            </div>
+            <h2>Temporarily Off the App Store</h2>
+            <p>The developer has cancelled their Apple Developer Program membership. Focus Time Only is temporarily unavailable for download on the App Store.</p>
         </div>
     </section>
 
